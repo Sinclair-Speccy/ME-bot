@@ -35,7 +35,7 @@ This is an older version of wiki.py which is the script used for searching chara
 
 ## Contributions and Removals
 
-Contributions are welcome! If you have suggestions for improvements or new features, please feel free to submit a pull request. In regards to adding other characters you should read [this](https://github.com/Sinclair-Speccy/metan-discord/blob/master/characters/readme.md), make a pull request and meet these requirements:
+Contributions are welcome! If you have suggestions for improvements or new features, please feel free to submit a pull request. In regards to adding other characters you should read [this](https://github.com/Sinclair-Speccy/ME-bot/blob/main/characters/readme.md), make a pull request and meet these requirements:
  
 - It must have a source such as a wiki. This is for the footer text.
 - It should be an OS-tan or similar. Not all technology related characters are OS-tans but they may be exceptions for this... i.e: Nanami Madobe is more of a mascot but everyone sees her as a OS-tan because she follows the same convention as them.
