@@ -69,7 +69,3 @@ Here’s an example of what a character JSON file looks like:
 - **first_appearance**: The character's first appearance in media or community. This is not always required.
 - **character_details**: A brief description of the character's personality, traits, and notable features.
 - **page_link**: A link to the character's wiki page for more detailed information. See "name" for an explanation.
-
-It should show like this
-
-![](https://github.com/Sinclair-Speccy/metan-discord/blob/master/Preview.PNG)
