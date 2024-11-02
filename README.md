@@ -45,4 +45,4 @@ If you have stuff here that you would like to be removed, please please *please*
 
 ## License
 
-This project is licensed under Apache License 2.0. See the LICENSE file for details.
+This project is licensed under GNU General Public License v3.0. See the LICENSE file for details.
