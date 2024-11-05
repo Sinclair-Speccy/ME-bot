@@ -41,7 +41,7 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 - It should be an OS-tan or similar. Not all technology related characters are OS-tans but they may be exceptions for this... i.e: Nanami Madobe is more of a mascot but everyone sees her as a OS-tan because she follows the same convention as them.
 - Get permission. I mean this may be a hit or miss thing but you should at least *try* to contact the creator if you can... depending on the circumstances stuff may be added without contacting first.
 
-If you have stuff here that you would like to be removed, please please *please* make a pull request or contact me via the email on my profile so this way I have proof content was requested to be removed. If I'm going to be honest complaining and not adhering to this make you look like an ass.
+If you have stuff here that you would like to be removed, please please *please* make a pull request or contact me via the email on my profile so this way I have proof content was requested to be removed by making a pull request on my own. If I'm going to be honest complaining and not adhering to this make you look like an ass.
 
 ## License
 
