@@ -1,5 +1,6 @@
-from . import ping
-from . import wiki
-from . import info  # Make sure this line is present
-
-__all__ = ['ping', 'wiki', 'info']
+from .ping import execute as ping
+from .wiki import execute as wiki
+from .info import execute as info
+from .help import execute as help_command
+from .copyright import execute as execute_copyright
+from .experiment import execute as experiment  # Add this line

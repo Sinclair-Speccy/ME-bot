@@ -1,0 +1,37 @@
+{
+    "Futaba Windows 1.0": {
+        "aliases": [
+            "Windows 1.0",
+            "Windows 1.0-tan",
+            "Windows 1.0たん",
+            "1.0-tan",
+            "1.0たん"
+        ],
+        "character_file": "Futaba_Windows_1.0.json"
+    },
+    "Windows 95 OSR 2.1": {
+        "aliases": [
+            "Windows 95"
+        ],
+        "character_file": "Windows_95_OSR_2.1.json"
+    },
+    "Windows 95 OSR 2.5": {
+        "aliases": [
+            "Windows 95"
+        ],
+        "character_file": "Windows_95_OSR_2.5.json"
+    },
+    "Nyake": {
+        "aliases": [
+            "Windows 2000",
+            "Win 2000"
+        ],
+        "character_file": "Nyaake.json"
+    },
+    "Windows XP Home": {
+        "aliases": [
+            "XP"
+        ],
+        "character_file": "Windows_XP_Homeko.json"
+    }
+}

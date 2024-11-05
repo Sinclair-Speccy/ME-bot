@@ -1,13 +1,11 @@
 import json
 import os
 
-# Define the directory to save JSON files
 output_directory = r"D:\Code\ME-bot\characters"
 
-# List of Windows character names and their page links
 characters = [
     {"name": "Windows 1.0-tan", "page_link": "https://www.ostan-collections.net/wiki/index.php/OSC_Windows_1.0"},
-    {"name": "Windows 1.0 Futaba", "page_link": "https://www.ostan-collections.net/wiki/index.php/Oichi-san"},  # Updated link
+    {"name": "Windows 1.0 Futaba", "page_link": "https://www.ostan-collections.net/wiki/index.php/Oichi-san"},
     {"name": "Windows 2.0", "page_link": "https://www.ostan-collections.net/wiki/index.php/Windows_2.0"},
     {"name": "Windows 3.1", "page_link": "https://www.ostan-collections.net/wiki/index.php/Windows_3.1"},
     {"name": "Windows 3.2", "page_link": "https://www.ostan-collections.net/wiki/index.php/Windows_3.2"},
@@ -38,30 +36,26 @@ characters = [
     {"name": "Windows Azure", "page_link": "https://www.ostan-collections.net/wiki/index.php/Windows_Azure"},
 ]
 
-# Ensure the output directory exists
 os.makedirs(output_directory, exist_ok=True)
 
-# Generate JSON files
 for character in characters:
     character_data = {
         "name": character["name"],
         "common_names": character["name"],
-        "faction": "Unknown",  # Placeholder, update as necessary
-        "lineage": "Unknown",  # Placeholder, update as necessary
-        "rivals": "Unknown",  # Placeholder, update as necessary
-        "height": "Unknown",  # Placeholder, update as necessary
-        "hair_color": "Unknown",  # Placeholder, update as necessary
-        "eye_color": "Unknown",  # Placeholder, update as necessary
-        "first_appearance": "Unknown",  # Placeholder, update as necessary
+        "faction": "Unknown",
+        "lineage": "Unknown",
+        "rivals": "Unknown",
+        "height": "Unknown",
+        "hair_color": "Unknown",
+        "eye_color": "Unknown",
+        "first_appearance": "Unknown",
         "character_details": "No character details available.",
         "page_link": character["page_link"]
     }
 
-    # Create the file name
     file_name = f"{character['name'].replace(' ', '_')}.json"
     file_path = os.path.join(output_directory, file_name)
 
-    # Write the JSON data to a file
     with open(file_path, 'w', encoding='utf-8') as json_file:
         json.dump(character_data, json_file, ensure_ascii=False, indent=4)
 

@@ -1,22 +1,22 @@
 {
     "OSC Windows 1.0": {
-        "aliases": ["Windows 1.0", "OSC Windows 1.0", "Windows_1.0_OSC", "Windows 1.0-tan", "1.0-tan"],
+        "aliases": ["Windows 1.0", "OSC Windows 1.0", "Windows_1.0_OSC", "Windows 1.0-tan", "Windows 1.0たん", "1.0-tan", "1.0たん"],
         "character_file": "OSC_Windows_1.0.json"
     },
     "Futaba Windows 1.0": {
-        "aliases": ["Windows 1.0", "Futaba Windows 1.0", "Oichi-san", "Windows 1.0 Futaba", "Futaba 1.0", "Windows 1.0-tan", "1.0-tan", "お壱さん"],
+        "aliases": ["Windows 1.0", "Futaba Windows 1.0", "Oichi-san", "Windows 1.0 Futaba", "Futaba 1.0", "Windows 1.0-tan", "Windows 1.0たん", "1.0-tan", "1.0たん", "お壱さん"],
         "character_file": "Futaba_Windows_1.0.json"
     },
     "Windows 2.0": {
-        "aliases": ["Windows 2.0", "Win 2", "Windows 2.0-tan", "2.0-chan"],
+        "aliases": ["Windows 2.0", "Win 2", "Windows 2.0-tan", "Windows 2.0たん", "2.0-chan", "2.0ちゃん"],
         "character_file": "Windows_2.0.json"
     },
     "Windows 3.1": {
-        "aliases": ["Windows 3.1", "Win 3.1", "Windows 3.1-tan", "Oobaba-sama", "Windows 3.0", "Windows 3.x", "WfW 3.11", "Ōbaba", "大婆様"],
+        "aliases": ["Windows 3.1", "Win 3.1", "Windows 3.1-tan", "Windows 3.1たん", "Oobaba-sama", "Windows 3.0", "Windows 3.x", "WfW 3.11", "Ōbaba", "大婆様"],
         "character_file": "Windows_3.1.json"
     },
     "Windows 3.2": {
-        "aliases": ["Windows 3.2", "Win 3.2", "Windows 3.2-tan", "3.2-chan"],
+        "aliases": ["Windows 3.2", "Win 3.2", "Windows 3.2-tan", "Windows 3.2たん", "3.2-chan", "3.2ちゃん"],
         "character_file": "Windows_3.2.json"
     },
     "Windows NT": {
@@ -24,71 +24,83 @@
         "character_file": "Windows_NT.json"
     },
     "Windows 95": {
-        "aliases": ["Windows 95", "Win 95", "95-tan", "95たん", "95-neesan", "Windows 95-tan", "Win95", "95-neesama", "Chicago"],
+        "aliases": ["Windows 95", "Win 95", "95-tan", "95たん", "95-neesan", "Windows 95-tan", "Windows 95たん", "Win95", "95-neesama", "Chicago"],
         "character_file": "Windows_95.json"
     },
-	"Windows 95 OSR 2.1": {
-        "aliases": ["Windows 95", "Windows 95 OSR 2.1", "Windows 95 OSR 2.1-tan", "OSR 2.1-san", "95B", "95 OSR 2.1-tan"],
+    "Windows 95 OSR 2.1": {
+        "aliases": ["Windows 95", "Windows 95 OSR 2.1", "Windows 95 OSR 2.1-tan", "Windows 95 OSR 2.1たん", "OSR 2.1-san", "OSR 2.1さん", "95B", "95 OSR 2.1-tan", "95 OSR 2.1たん"],
         "character_file": "Windows_95_OSR_2.1.json"
     },
-	"Windows 95 OSR 2.5": {
-        "aliases": ["Windows 95", "Windows 95 OSR 2.5", "Windows 95 OSR 2.5-tan", "OSR 2.5-sama", "95C"],
+    "Windows 95 OSR 2.5": {
+        "aliases": ["Windows 95", "Windows 95 OSR 2.5", "Windows 95 OSR 2.5-tan", "Windows 95 OSR 2.5たん", "OSR 2.5-sama", "OSR 2.5さま", "95C"],
         "character_file": "Windows_95_OSR_2.5.json"
     },
     "Windows 98": {
-        "aliases": ["Windows 98", "Win 98", "98-tan"],
+        "aliases": ["Windows 98", "Win 98", "98-tan", "98たん"],
         "character_file": "Windows_98.json"
     },
-	"Windows 98 SE": {
-        "aliases": ["Windows 98 SE", "Win 98 SE", "98 SE-tan", "Windows 98 SE-tan", "Secchan", "98 Second Edition"],
-        "character_file": "Windows_98_SE.json"
+    "Windows 98 SE": {
+        "aliases": ["Windows 98", "Windows 98SE", "Windows 98 SE", "Win 98 SE", "98 SE-tan", "98 SEたん", "Windows 98 SE-tan", "Windows 98 SEたん", "Secchan", "98 Second Edition"],
+        "character_file": "Windows_98SE.json"
     },
     "Windows ME": {
-        "aliases": ["Windows ME", "Win ME", "ME-tan", "Windows ME-tan", "Meたん", "ME", "えむいー"],
+        "aliases": ["Windows ME", "Win ME", "ME-tan", "Windows ME-tan", "Windows MEたん", "Meたん", "ME", "えむいー"],
         "character_file": "Windows_ME.json"
     },
     "Windows 2000": {
-        "aliases": ["Windows 2000", "Win 2000", "2k-tan"],
+        "aliases": ["Windows 2000", "Win 2000", "2k-tan", "2kたん", "Windows 2000 Professional", "Win2k", "Advanced Server", "NT 5.0", "Nisen", "Nichi", "Windows 2000-tan"],
         "character_file": "Windows_2000.json"
     },
     "Nyake": {
-        "aliases": ["Windows 2000", "Win 2000", "Nyaake"],
+        "aliases": ["Windows 2000", "Win 2000", "Nyaake", "Nya-ke", "Nyaakeたん", "にゃーけー"],
         "character_file": "Nyaake.json"
     },
     "Windows XP Pro": {
-        "aliases": ["XP", "Windows XP", "Win XP", "XP Pro"],
+        "aliases": ["XP", "Windows XP", "Win XP", "XP Pro", "XP Pro-tan", "XP Proたん", "XP-tan", "XP-chan", "Windows Experience", "Whistler"],
         "character_file": "Windows_XP_Pro.json"
     },
     "Windows XP Home": {
-        "aliases": ["Windows XP Home", "Win XP Home", "XP", "XP Homeko"],
-        "character_file": "Windows_XP_Home.json"
-    }, 
+        "aliases": ["XP", "Windows XP Home", "Win XP Home", "XP", "XP Homeko", "XP Home-tan", "XP Homeたん", "XP-Home", "Homeko"],
+        "character_file": "Windows_XP_Homeko.json"
+    },
     "Windows XP Media Center Edition": {
-        "aliases": ["Windows MCE", "XP Media Center Edition"],
-        "character_file": "Windows_XP_Media_Center_Edidion.json"
+        "aliases": ["XP", "Windows MCE", "XP Media Center Edition", "Moseko", "Mosoko", "Windows XP MCE", "Windows XP ME", "Windows XP Media Center Edition-tan", "XP MCE-tan", "MCEたん"],
+        "character_file": "Windows_XP_Media_Center_Edition.json"
     },
     "Windows Vista": {
-        "aliases": ["Windows Vista", "Win Vista", "Longhorn"],
+        "aliases": ["Windows Vista", "Win Vista", "Vista-tan", "Vistaたん", "Vis-tan", "Vistan", "Visbou", "Vistake", "Chiivistan", "Longhorn"],
         "character_file": "Windows_Vista.json"
     },
+    "Windows Server 2008": {
+        "aliases": ["Windows Server 2008", "Server 2008-tan", "Windows Server 2008", "2008 Server", "Server ’08"],
+        "character_file": "Windows_2008_Server.json"
+    },
+    "Windows Server 2003": {
+        "aliases": ["Windows Server 2003", "Server 2003-tan", "Windows Server 2003", "2003 Server", "Windows .NET Server", "whistler Server", "Saba", "Saba-tan"],
+        "character_file": "Windows_2003_Server.json"
+    },
+    "Windows CE": {
+        "aliases": ["Windows CE", "WinCE", "Windows Consumer Electronics", "Windows Compact Edition", "Windows Mobile", "Pocket PC", "Windows CE-tan"],
+        "character_file": "Windows_CE.json"
+    },
     "Windows 7": {
-        "aliases": ["Windows 7", "Win 7", "7-tan", "Nanami Madobe", "Madobe Nanami"],
+        "aliases": ["Windows 7", "Win 7", "7-tan", "Nanami Madobe", "Madobe Nanami", "7たん", "Blackcomb", "Vienna"],
         "character_file": "Windows_7.json"
     },
     "Windows 8": {
-        "aliases": ["Windows 8", "Win 8", "8-tan"],
+        "aliases": ["Windows 8", "Win 8", "8-tan", "8たん", "8-chan", "8ちゃん", "Yu Madobe", "Madobe Yu", "Yuu", "Ai Madobe", "Madobe Ai"],
         "character_file": "Windows_8.json"
     },
     "Windows 10": {
-        "aliases": ["Windows 10", "Win 10", "10-tan"],
+        "aliases": ["Windows 10", "Win 10", "10-tan", "10たん", "10-chan", "10ちゃん", "Toko Madobe", "Madobe Toko", "Touko", "Tooko"],
         "character_file": "Windows_10.json"
     },
     "Microsoft Silverlight": {
-        "aliases": ["Microsoft Silverlight", "Silverlight"],
+        "aliases": ["Microsoft Silverlight", "Silverlight", "Hikaru Aizawa", "藍澤光", "Silverlight-tan", "Silverlightたん"],
         "character_file": "Microsoft_Silverlight.json"
     },
     "Windows Azure": {
-        "aliases": ["Windows Azure", "Azure"],
+        "aliases": ["Windows Azure", "Azure", "Claudia Madobe", "クラウディア・窓辺", "Azure-tan", "Azureたん"],
         "character_file": "Windows_Azure.json"
     }
 }
