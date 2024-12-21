@@ -1,7 +1,7 @@
 import json
 import os
 
-output_directory = r"D:\Code\ME-bot\characters"
+output_directory = r"D:\Code\ME-bot\To add"
 
 characters = [
     {"name": "Windows 1.0-tan", "page_link": "https://www.ostan-collections.net/wiki/index.php/OSC_Windows_1.0"},

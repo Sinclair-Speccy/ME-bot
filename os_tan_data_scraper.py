@@ -5,12 +5,31 @@ import json
 import os
 
 # Directory to store JSON files
-output_dir = "D:/Code/ME-bot/characters"
+output_dir = "D:/Code/ME-bot/To_add"
 os.makedirs(output_dir, exist_ok=True)
 
-def get_character_links():
+# Optional file containing URLs
+urls_file = "D:/Code/ME-bot/urls.txt"
+
+def sanitize_filename(character_name):
+    """Sanitize the character name to be a valid filename."""
+    return re.sub(r'[<>:"/\\|?*]', '_', character_name)
+
+def get_character_links_from_file():
+    """Reads the character URLs from a file."""
+    character_links = []
+    if os.path.exists(urls_file):
+        with open(urls_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line:  # Ensure non-empty lines
+                    character_name = line.split('/')[-1].replace('_', ' ').replace('-tan', '')
+                    character_links.append((character_name, line))
+    return character_links
+
+def get_character_links_from_web():
     """Scrapes the 'View All' page to get links to each character's page."""
-    url = "https://www.ostan-collections.net/wiki/index.php/View_All"
+    url = "https://www.ostan-collections.net/wiki/index.php/Apple-tans"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     character_links = []
@@ -29,26 +48,29 @@ def construct_api_urls(character_name):
     return api_url_with_tan, api_url_without_tan
 
 def fetch_content(api_url_with_tan, api_url_without_tan):
-    response = requests.get(api_url_with_tan)
-    data = response.json()
-    pages = data['query']['pages']
-    page = next(iter(pages.values()))
-    
-    if 'revisions' in page:
-        title = page['title']
-        content = page['revisions'][0]['*']
-    else:
-        response = requests.get(api_url_without_tan)
-        data = response.json()
-        pages = data['query']['pages']
-        page = next(iter(pages.values()))
-        
-        if 'revisions' in page:
-            title = page['title']
-            content = page['revisions'][0]['*']
-        else:
+    def request_content(url):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            return data
+        except requests.exceptions.RequestException as e:
+            print(f"Request failed: {e}")
+            return None
+
+    data = request_content(api_url_with_tan)
+    if not data or 'query' not in data:
+        data = request_content(api_url_without_tan)
+        if not data or 'query' not in data:
+            print(f"No data found for the page. It may not exist: {api_url_with_tan}")
             return None, None
-    return title, content
+
+    pages = data['query']['pages']
+    page = next(iter(pages.values()), {})
+    if 'revisions' in page:
+        return page['title'], page['revisions'][0]['*']
+    
+    return None, None
 
 def parse_infobox(content):
     infobox_match = re.search(r'{{OSinfobox(.*?)}}', content, re.DOTALL)
@@ -63,9 +85,11 @@ def parse_infobox(content):
 
 def clean_text(text):
     """Remove unwanted bracketed text."""
-    text = re.sub(r'\[\[.*?\]\]', '', text)  # Remove double-bracketed links
-    text = re.sub(r'{{.*?}}', '', text)      # Remove template braces
-    text = text.replace('[[', '').replace(']]', '')
+    # Remove nested brackets and any remaining unclosed brackets
+    while '[[' in text and ']]' in text:
+        text = re.sub(r'\[\[.*?\]\]', '', text)
+    text = re.sub(r'{{.*?}}', '', text)  # Remove template braces
+    text = text.replace('[', '').replace(']', '')
     return text
 
 def parse_character_details(content):
@@ -75,43 +99,47 @@ def parse_character_details(content):
     if character_section_match:
         character_details = character_section_match.group(1).strip()
     else:
-        character_description_match = re.search(r'(?<=}})([\s\S]*?)(?=\n==Technical details==|\n==See also==|\n\[\[Category:|\n?$)', content, re.DOTALL)
+        character_description_match = re.search(r'(?<=}})([\s\S]*?)(?=\n==Technical details==|\n==See also==|\n\[Category:|\n?$)', content, re.DOTALL)
         if character_description_match:
             character_details = character_description_match.group(0).strip()
     
     if character_details:
         character_details = re.sub(r'{{.*?}}', '', character_details)
-        character_details = re.sub(r'\[\[.*?\|', '', character_details)
-        character_details = re.sub(r'\[\[.*?\]', '', character_details)
         character_details = character_details.replace('==', '').strip()
         character_details = re.sub(r'\n+', ' ', character_details)
         character_details = character_details.replace('  ', ' ').strip()
     
     return clean_text(character_details)
 
-def save_character_data(character_name, infobox_dict, character_details):
+def save_character_data(character_name, infobox_dict, character_details, page_url):
+    # Ensure faction is a single string, not a list
+    faction = clean_text(infobox_dict.get('apfaction', 'Unknown')).replace('[', '').replace(']', '').replace('"', '').strip()
+
     character_data = {
         "name": character_name,
         "common_names": clean_text(infobox_dict.get('alias', 'Unknown')),
-        "faction": clean_text(infobox_dict.get('apfaction', 'Unknown')),
+        "faction": faction,  # Ensure this is a string
         "lineage": clean_text(infobox_dict.get('lineage', 'Unknown')),
         "rivals": "Unknown",
         "height": clean_text(infobox_dict.get('height', 'Unknown')),
         "hair_color": clean_text(infobox_dict.get('haircolor', 'Unknown')),
         "eye_color": clean_text(infobox_dict.get('eyecolor', 'Unknown')),
         "first_appearance": clean_text(infobox_dict.get('debut', 'Unknown')),
-        "character_details": character_details or 'No character details available.'
+        "character_details": character_details or 'No character details available.',
+        "page_link": page_url  # Adding the page link to the saved data
     }
     
-    filename = f"{character_name.replace(' ', '_')}.json"
-    # Ensure the path is consistent for all operating systems
+    # Sanitize the character name before using it as a filename
+    filename = f"{sanitize_filename(character_name)}.json"
     filepath = os.path.join(output_dir, filename)
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(character_data, f, ensure_ascii=False, indent=4)
 
 def main():
-    character_links = get_character_links()
+    character_links = get_character_links_from_file() or get_character_links_from_web()
+    
     print(f"Found {len(character_links)} characters. Starting data extraction...")
+    
     for character_name, url in character_links:
         print(f"Fetching details for '{character_name}'...")
         api_url_with_tan, api_url_without_tan = construct_api_urls(character_name)
@@ -120,7 +148,8 @@ def main():
         if content:
             infobox_dict = parse_infobox(content)
             character_details = parse_character_details(content)
-            save_character_data(character_name, infobox_dict, character_details)
+            page_url = f"https://www.ostan-collections.net/wiki/{character_name.replace(' ', '_')}"
+            save_character_data(character_name, infobox_dict, character_details, page_url)
             print(f"Saved data for '{character_name}'")
         else:
             print(f"No data found for '{character_name}'")

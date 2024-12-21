@@ -1,6 +1,6 @@
 {
     "name": "Windows 10",
-    "common_names": "Windows 10-tan",
+    "common_names": ["Windows 10-tan", "Win 10", "10-tan", "10たん", "10-chan", "10ちゃん", "Toko Madobe", "Madobe Toko", "Touko", "Tooko"],
     "faction": "Windows Family",
     "lineage": "Windows NT",
     "rivals": "Unknown",

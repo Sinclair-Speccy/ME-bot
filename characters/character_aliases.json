@@ -1,10 +1,10 @@
 {
     "OSC Windows 1.0": {
-        "aliases": ["Windows 1.0", "OSC Windows 1.0", "Windows_1.0_OSC", "Windows 1.0-tan", "Windows 1.0たん", "1.0-tan", "1.0たん"],
+        "aliases": ["Windows 1.0", "OSC Windows 1.0", "Windows_1.0_OSC", "Windows 1.0-tan", "1.0-tan", "Windows 1.0たん", "1.0たん"],
         "character_file": "OSC_Windows_1.0.json"
     },
     "Futaba Windows 1.0": {
-        "aliases": ["Windows 1.0", "Futaba Windows 1.0", "Oichi-san", "Windows 1.0 Futaba", "Futaba 1.0", "Windows 1.0-tan", "Windows 1.0たん", "1.0-tan", "1.0たん", "お壱さん"],
+        "aliases": ["Windows 1.0", "Futaba Windows 1.0", "Oichi-san", "Windows 1.0 Futaba", "Futaba 1.0", "Windows 1.0-tan", "1.0-tan", "Windows 1.0たん", "1.0たん", "お壱さん"],
         "character_file": "Futaba_Windows_1.0.json"
     },
     "Windows 2.0": {
@@ -12,11 +12,11 @@
         "character_file": "Windows_2.0.json"
     },
     "Windows 3.1": {
-        "aliases": ["Windows 3.1", "Win 3.1", "Windows 3.1-tan", "Windows 3.1たん", "Oobaba-sama", "Windows 3.0", "Windows 3.x", "WfW 3.11", "Ōbaba", "大婆様"],
+        "aliases": ["Windows 3.1", "Win 3.1", "Windows 3.1-tan", "Windows 3.0", "Windows 3.x", "WfW 3.11", "Oobaba-sama", "Ōbaba"],
         "character_file": "Windows_3.1.json"
     },
     "Windows 3.2": {
-        "aliases": ["Windows 3.2", "Win 3.2", "Windows 3.2-tan", "Windows 3.2たん", "3.2-chan", "3.2ちゃん"],
+        "aliases": ["Windows 3.2", "Win 3.2", "Windows 3.2-tan", "3.2-chan", "3.2ちゃん"],
         "character_file": "Windows_3.2.json"
     },
     "Windows NT": {
@@ -24,15 +24,15 @@
         "character_file": "Windows_NT.json"
     },
     "Windows 95": {
-        "aliases": ["Windows 95", "Win 95", "95-tan", "95たん", "95-neesan", "Windows 95-tan", "Windows 95たん", "Win95", "95-neesama", "Chicago"],
+        "aliases": ["Windows 95", "Win 95", "95-tan", "95たん", "95-neesan", "Windows 95-tan", "Win95", "95-neesama", "Chicago"],
         "character_file": "Windows_95.json"
     },
     "Windows 95 OSR 2.1": {
-        "aliases": ["Windows 95", "Windows 95 OSR 2.1", "Windows 95 OSR 2.1-tan", "Windows 95 OSR 2.1たん", "OSR 2.1-san", "OSR 2.1さん", "95B", "95 OSR 2.1-tan", "95 OSR 2.1たん"],
+        "aliases": ["Windows 95", "Windows 95 OSR 2.1", "Windows 95 OSR 2.1-tan", "OSR 2.1-san", "OSR 2.1さん", "95B"],
         "character_file": "Windows_95_OSR_2.1.json"
     },
     "Windows 95 OSR 2.5": {
-        "aliases": ["Windows 95", "Windows 95 OSR 2.5", "Windows 95 OSR 2.5-tan", "Windows 95 OSR 2.5たん", "OSR 2.5-sama", "OSR 2.5さま", "95C"],
+        "aliases": ["Windows 95", "Windows 95 OSR 2.5", "Windows 95 OSR 2.5-tan", "OSR 2.5-sama", "OSR 2.5さま", "95C"],
         "character_file": "Windows_95_OSR_2.5.json"
     },
     "Windows 98": {
@@ -40,15 +40,15 @@
         "character_file": "Windows_98.json"
     },
     "Windows 98 SE": {
-        "aliases": ["Windows 98", "Windows 98SE", "Windows 98 SE", "Win 98 SE", "98 SE-tan", "98 SEたん", "Windows 98 SE-tan", "Windows 98 SEたん", "Secchan", "98 Second Edition"],
+        "aliases": ["Windows 98", "Windows 98 SE", "Windows 98SE", "Win 98 SE", "98 SE-tan", "98 Second Edition", "Secchan"],
         "character_file": "Windows_98SE.json"
     },
     "Windows ME": {
-        "aliases": ["Windows ME", "Win ME", "ME-tan", "Windows ME-tan", "Windows MEたん", "Meたん", "ME", "えむいー"],
+        "aliases": ["Windows ME", "Win ME", "ME-tan", "Windows ME-tan", "Meたん", "ME", "えむいー"],
         "character_file": "Windows_ME.json"
     },
     "Windows 2000": {
-        "aliases": ["Windows 2000", "Win 2000", "2k-tan", "2kたん", "Windows 2000 Professional", "Win2k", "Advanced Server", "NT 5.0", "Nisen", "Nichi", "Windows 2000-tan"],
+        "aliases": ["Windows 2000", "Win 2000", "2k-tan", "2kたん", "Windows 2000 Professional", "Win2k", "NT 5.0", "Advanced Server", "Nisen", "Nichi", "Windows 2000-tan"],
         "character_file": "Windows_2000.json"
     },
     "Nyake": {
@@ -56,27 +56,27 @@
         "character_file": "Nyaake.json"
     },
     "Windows XP Pro": {
-        "aliases": ["XP", "Windows XP", "Win XP", "XP Pro", "XP Pro-tan", "XP Proたん", "XP-tan", "XP-chan", "Windows Experience", "Whistler"],
+        "aliases": ["Windows XP", "Windows XP Pro", "Win XP Pro", "XP Pro-tan", "XP-tan", "XP-chan", "Windows Experience", "Whistler"],
         "character_file": "Windows_XP_Pro.json"
     },
     "Windows XP Home": {
-        "aliases": ["XP", "Windows XP Home", "Win XP Home", "XP", "XP Homeko", "XP Home-tan", "XP Homeたん", "XP-Home", "Homeko"],
+        "aliases": ["Windows XP", "Windows XP Home", "Win XP Home", "XP Homeko", "XP Home-tan", "XP Homeたん", "XP-Home", "Homeko"],
         "character_file": "Windows_XP_Homeko.json"
     },
     "Windows XP Media Center Edition": {
-        "aliases": ["XP", "Windows MCE", "XP Media Center Edition", "Moseko", "Mosoko", "Windows XP MCE", "Windows XP ME", "Windows XP Media Center Edition-tan", "XP MCE-tan", "MCEたん"],
+        "aliases": ["Windows XP", "Windows XP MCE", "Windows XP Media Center Edition", "Windows MCE", "XP Media Center Edition", "Moseko", "Mosoko", "XP MCE", "XP MCE-tan", "MCEたん"],
         "character_file": "Windows_XP_Media_Center_Edition.json"
     },
     "Windows Vista": {
-        "aliases": ["Windows Vista", "Win Vista", "Vista-tan", "Vistaたん", "Vis-tan", "Vistan", "Visbou", "Vistake", "Chiivistan", "Longhorn"],
+        "aliases": ["Windows Vista", "Win Vista", "Vista-tan", "Vistaたん", "Vistan", "Visbou", "Chiivistan", "Longhorn"],
         "character_file": "Windows_Vista.json"
     },
     "Windows Server 2008": {
-        "aliases": ["Windows Server 2008", "Server 2008-tan", "Windows Server 2008", "2008 Server", "Server ’08"],
+        "aliases": ["Windows Server 2008", "Server 2008-tan", "2008 Server", "Server ’08"],
         "character_file": "Windows_2008_Server.json"
     },
     "Windows Server 2003": {
-        "aliases": ["Windows Server 2003", "Server 2003-tan", "Windows Server 2003", "2003 Server", "Windows .NET Server", "whistler Server", "Saba", "Saba-tan"],
+        "aliases": ["Windows Server 2003", "Server 2003-tan", "2003 Server", "Windows .NET Server", "Whistler Server", "Saba-tan"],
         "character_file": "Windows_2003_Server.json"
     },
     "Windows CE": {
@@ -84,23 +84,135 @@
         "character_file": "Windows_CE.json"
     },
     "Windows 7": {
-        "aliases": ["Windows 7", "Win 7", "7-tan", "Nanami Madobe", "Madobe Nanami", "7たん", "Blackcomb", "Vienna"],
+        "aliases": ["Windows 7", "Win 7", "7-tan", "Nanami Madobe", "Madobe Nanami", "Blackcomb", "Vienna"],
         "character_file": "Windows_7.json"
     },
     "Windows 8": {
-        "aliases": ["Windows 8", "Win 8", "8-tan", "8たん", "8-chan", "8ちゃん", "Yu Madobe", "Madobe Yu", "Yuu", "Ai Madobe", "Madobe Ai"],
+        "aliases": ["Windows 8", "Win 8", "8-tan", "Yu Madobe", "Yuu", "Ai Madobe"],
         "character_file": "Windows_8.json"
     },
     "Windows 10": {
-        "aliases": ["Windows 10", "Win 10", "10-tan", "10たん", "10-chan", "10ちゃん", "Toko Madobe", "Madobe Toko", "Touko", "Tooko"],
+        "aliases": ["Windows 10", "Win 10", "10-tan", "Toko Madobe", "Tooko"],
         "character_file": "Windows_10.json"
     },
     "Microsoft Silverlight": {
-        "aliases": ["Microsoft Silverlight", "Silverlight", "Hikaru Aizawa", "藍澤光", "Silverlight-tan", "Silverlightたん"],
+        "aliases": ["Microsoft Silverlight", "Silverlight", "Hikaru Aizawa", "Silverlight-tan"],
         "character_file": "Microsoft_Silverlight.json"
     },
     "Windows Azure": {
-        "aliases": ["Windows Azure", "Azure", "Claudia Madobe", "クラウディア・窓辺", "Azure-tan", "Azureたん"],
+        "aliases": ["Windows Azure", "Azure", "Claudia Madobe", "Azure-tan"],
         "character_file": "Windows_Azure.json"
+    },
+    "Apple I-tan": {
+        "aliases": ["Apple I-tan", "I-okaasan"],
+        "character_file": "Apple_I.json"
+    },
+    "Apple II-tan": {
+        "aliases": ["Apple II-tan", "Apple II", "][\\-chan"],
+        "character_file": "Apple_II.json"
+    },
+    "Apple III-tan": {
+        "aliases": ["Apple III-tan", "Apple ///", "Sara", "Sara Appletree"],
+        "character_file": "Apple_III.json"
+    },
+    "Apple Lisa-tan": {
+        "aliases": ["Lisa-tan", "Apple Lisa", "Lisa Appletree (western)", "Lisa Ringo (Japanese)"],
+        "character_file": "Apple_Lisa.json"
+    },
+    "A/UX": {
+        "aliases": ["A/UX", "Space Cadet", "Apple Unix"],
+        "character_file": "A_UX.json"
+    },
+    "GS/OS": {
+        "aliases": ["GS/OS", "GS/OS-tan", "Apple IIGS", "Phoenix", "Rambo", "Cortland", "Phoenix Appletree", "Phoenix Ringo"],
+        "character_file": "GS_OS.json"
+    },
+    "Mac OS": {
+        "aliases": ["Mac OS", "MacOS", "Mac-tan", "OSX-tan", "Shian"],
+        "character_file": "MacOS.json"
+    },
+    "Macintosh System 1": {
+        "aliases": ["Macintosh System 1", "Macintosh System 1-tan", "Mac OS1-tan", "System 1-tan"],
+        "character_file": "Macintosh_System_1.json"
+    },
+    "Macintosh System 2": {
+        "aliases": ["Macintosh System 2", "Macintosh System 2-tan", "Mac OS2-tan", "System 2", "Mac OS2", "Ahiru-chan"],
+        "character_file": "Macintosh_System_2.json"
+    },
+    "Macintosh System 3": {
+        "aliases": ["Macintosh System 3", "Macintosh System 3-tan", "Mac OS3-tan", "System 3"],
+        "character_file": "Macintosh_System_3.json"
+    },
+    "Macintosh System 3.4": {
+        "aliases": ["Macintosh System 3.4", "Macintosh System 3.4-tan", "Mac OS 3.4-tan"],
+        "character_file": "Macintosh_System_3_4.json"
+    },
+    "Macintosh System 4": {
+        "aliases": ["Macintosh System 4", "Macintosh System 4-tan", "System 4", "Mac OS4"],
+        "character_file": "Macintosh_System_4.json"
+    },
+    "Macintosh System 5": {
+        "aliases": ["Macintosh System 5", "Macintosh System 5-tan", "Mac OS5-tan", "Phantom of the Macintosh"],
+        "character_file": "Macintosh_System_5.json"
+    },
+    "Macintosh System 6": {
+        "aliases": ["Macintosh System 6", "Mac OS6", "System 6.0.x"],
+        "character_file": "Macintosh_System_6.json"
+    },
+    "Macintosh System 7": {
+        "aliases": ["Macintosh System 7", "Blue", "Capone", "Pleiades"],
+        "character_file": "Macintosh_System_7.json"
+    },
+    "Macintosh System 7.5": {
+        "aliases": ["Macintosh System 7.5", "Al-chan", "Amadea Macintosh"],
+        "character_file": "Macintosh_System_7_5.json"
+    },
+    "Newton OS": {
+        "aliases": ["Newton OS-tan", "Apple Newton"],
+        "character_file": "Newton_OS.json"
+    },
+    "Mac OS 8": {
+        "aliases": ["Mac OS 8", "Mac OS 7.7 (former name)", "Veronica", "Tempo", "Allegro", "Veronica Macintosh"],
+        "character_file": "Mac_OS_8.json"
+    },
+    "Mac OS 9": {
+        "aliases": ["Mac OS 9", "Mac OS9-tan", "Sonata", "Sonata Sensei", "9ne-san", "Mac OS 8.7"],
+        "character_file": "Mac_OS_9.json"
+	},
+    "Mac OSX Server": {
+        "aliases": ["OSX Server-tan", "Rhapsody"],
+        "character_file": "Rhapsody.json"
+    },
+    "Mac OSX 10.0 Cheetah": {
+        "aliases": ["Mac OSX-tan", "Cheetah"],
+        "character_file": "Cheetah.json"
+    },
+    "Mac OSX 10.1 Puma": {
+        "aliases": ["Mac OSX 10.1-tan", "Pu-chan"],
+        "character_file": "Puma.json"
+    },
+    "Mac OSX 10.2 Jaguar": {
+        "aliases": ["Mac OSX 10.2-tan", "Jaguar-tan"],
+        "character_file": "Jaguar.json"
+    },
+    "Mac OSX 10.3 Panther": {
+        "aliases": ["Mac OSX 10.3-tan", "Panther-tan"],
+        "character_file": "Panther.json"
+    },
+    "Mac OSX 10.4 Tiger": {
+        "aliases": ["Mac OSX 10.4-tan", "Tiger-sama"],
+        "character_file": "Tiger.json"
+    },
+    "Mac OSX 10.5 Leopard": {
+        "aliases": ["Mac OS X Leopard", "OS X 10.5", "Pardus", "Pardus Cupertino", "Leona Macintosh"],
+        "character_file": "Leopard.json"
+    },
+    "Mac OSX 10.6 Snow Leopard": {
+        "aliases": ["Mac OSX Snow Leopard", "10.6", "Snow"],
+        "character_file": "Snow_Leopard.json"
+    },
+    "Mac OSX 10.7 Lion": {
+        "aliases": ["Mac OSX 10.7", "Lion"],
+        "character_file": "Lion.json"
     }
 }

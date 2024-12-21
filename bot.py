@@ -1,41 +1,92 @@
 import discord
-import json
+from discord.ext import commands
+import time
+import logging
+from commands import ping, wiki, info, help_command, execute_copyright, experiment, status, image
 from utils import read_config
-from commands import ping, wiki, info, help_command, execute_copyright, experiment
 
-config = read_config()
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+# Load configuration
+try:
+    config = read_config("config.json")  # Specify the file path for clarity
+    bot_token = config.get("login", {}).get("token")
+    command_prefix = config.get("prefix", "&")
+    if not bot_token:
+        raise ValueError("Bot token is missing in config.json")
+except FileNotFoundError:
+    logger.error("Config file 'config.json' not found. Ensure the file exists.")
+    raise
+except ValueError as e:
+    logger.error(f"Configuration error: {e}")
+    raise
+except Exception as e:
+    logger.error(f"Failed to load configuration: {e}")
+    raise
+
+# Set up bot with intents
 intents = discord.Intents.default()
 intents.message_content = True
-client = discord.Client(intents=intents)
+bot = commands.Bot(command_prefix=command_prefix, intents=intents)
 
-@client.event
+# Record bot start time
+bot.start_time = time.time()
+
+# Events
+@bot.event
 async def on_ready():
-    print(f'Logged in as {client.user}')
+    logger.info(f'Logged in as {bot.user}')
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+# Commands
+@bot.command(name='ping')
+async def ping_command(ctx):
+    logger.info(f'Ping command invoked by {ctx.author} in {ctx.guild.name if ctx.guild else "DM"}')
+    await ping(bot, ctx)
 
-    print(f'Received message: {message.content}')
+@bot.command(name='wiki')
+async def wiki_command(ctx):
+    logger.info(f'Wiki command invoked by {ctx.author}')
+    await wiki(bot, ctx)
 
-    if message.content.startswith(config['prefix'] + 'ping'):
-        print('Ping command detected')
-        await ping(client, message)
-    elif message.content.startswith(config['prefix'] + 'wiki'):
-        print('Wiki command detected')
-        await wiki(client, message)
-    elif message.content.startswith(config['prefix'] + 'help'):
-        print('Help command detected')
-        await help_command(client, message)
-    elif message.content.startswith(config['prefix'] + 'info'):
-        print('Info command detected')
-        await info(client, message)
-    elif message.content.startswith(config['prefix'] + 'copyright'):
-        print('Copyright command detected')
-        await execute_copyright(client, message)
-    elif message.content.startswith(config['prefix'] + 'experiment'):  # Add this block
-        print('Experiment command detected')
-        await experiment(client, message)
+# Remove the default help command
+bot.remove_command("help")
 
-client.run(config['login']['token'])
+@bot.command(name='help')
+async def help_command_fn(ctx):
+    logger.info(f'Help command invoked by {ctx.author}')
+    await help_command(bot, ctx)
+
+@bot.command(name='info')
+async def info_command(ctx):
+    logger.info(f'Info command invoked by {ctx.author}')
+    await info(bot, ctx)
+
+@bot.command(name='copyright')
+async def copyright_command(ctx):
+    logger.info(f'Copyright command invoked by {ctx.author}')
+    await execute_copyright(bot, ctx)
+
+@bot.command(name='experiment')
+async def experiment_command(ctx):
+    logger.info(f'Experiment command invoked by {ctx.author}')
+    await experiment(bot, ctx)
+
+@bot.command(name='status')
+async def status_command(ctx):
+    logger.info(f'Status command invoked by {ctx.author}')
+    await status(bot, ctx)
+
+@bot.command(name='image')
+async def image_command(ctx):
+    logger.info(f'Image command invoked by {ctx.author}')
+    await image(bot, ctx)
+
+# Run the bot
+try:
+    bot.run(bot_token)
+except discord.LoginFailure:
+    logger.error("Invalid bot token. Please check your config.json.")
+except Exception as e:
+    logger.error(f"An unexpected error occurred: {e}")
