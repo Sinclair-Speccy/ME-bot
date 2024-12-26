@@ -46,3 +46,5 @@ If you have stuff here that you would like to be removed, please please *please*
 ## License
 
 This project is licensed under GNU General Public License v3.0. See the LICENSE file for details.
+
+Also please note this bot is NOT associated with other OS-tan communities and was made for the r/OStan discord omly...
